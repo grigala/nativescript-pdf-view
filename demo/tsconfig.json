@@ -1,17 +1,18 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
+        "module": "esnext",
+        "target": "es2017",
         "experimentalDecorators": true,
-	"declaration": false,
-        "removeComments": true,
+        "declaration": false,
+        "removeComments": false,
         "emitDecoratorMetadata": true,
-	"noEmitHelpers": true,
-	"noEmitOnError": true,
-	"skipLibCheck": true,
-           "lib": [
+        "noEmitHelpers": true,
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+        "lib": [
             "es6",
-            "dom"
+            "dom",
+            "es2017"
         ],
         "pretty": true,
         "allowUnreachableCode": false,
@@ -28,15 +29,16 @@
             "*": [
                 "./node_modules/*"
             ]
-        }
+        },
+        "moduleResolution": "node"
     },
     "exclude": [
         "node_modules",
         "platforms",
-	"../src/node_modules"
+        "../src/node_modules"
     ],
     "include": [
-		"../src",
-		"**/*"
-	]
+        "../src",
+        "**/*"
+    ]
 }

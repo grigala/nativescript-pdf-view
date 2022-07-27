@@ -18,14 +18,6 @@ export class PDFView extends PDFViewCommon {
     });
   })();
 
-  public get android() {
-    return this.nativeView as pdfviewer.PDFView;
-  }
-
-  public set android(value) {
-    this.nativeView = value;
-  }
-
   public createNativeView() {
     // tslint:disable-next-line:no-unsafe-any
     return new pdfviewer.PDFView(this._context, void 0);

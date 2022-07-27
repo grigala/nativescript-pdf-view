@@ -1,5 +1,3 @@
-import { screen } from '@nativescript/core/platform';
-
 import { PDFViewCommon, srcProperty } from './pdf-view.common';
 
 class PDFViewDelegate extends NSObject implements WKNavigationDelegate {
@@ -24,14 +22,6 @@ export class PDFView extends PDFViewCommon {
   public constructor() {
     super();
     this.init();
-  }
-
-  public get ios() {
-    return this.nativeView as WKWebView;
-  }
-
-  public set ios(value: WKWebView) {
-    this.nativeView = value;
   }
 
   public [srcProperty.setNative](value: string) {
